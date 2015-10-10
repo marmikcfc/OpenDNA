@@ -18,11 +18,5 @@
   },
   "homepage": "https://github.com/cbanbury/boilerplate-meteor#readme",
   "dependencies": {
-      "JSONStream":"*",
-      "event-stream":"*",
-      "gql":"*",
-      "dna2json":"*",
-      "genoset-norovirus":"*"
-
   }
 }
