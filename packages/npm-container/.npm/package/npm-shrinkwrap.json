@@ -1,0 +1,113 @@
+{
+  "dependencies": {
+    "JSONStream": {
+      "version": "1.0.6",
+      "dependencies": {
+        "jsonparse": {
+          "version": "1.1.0"
+        },
+        "through": {
+          "version": "2.3.8"
+        }
+      }
+    },
+    "dna2json": {
+      "version": "1.0.1",
+      "dependencies": {
+        "first-match": {
+          "version": "0.0.1"
+        },
+        "lodash.reduce": {
+          "version": "3.1.2",
+          "dependencies": {
+            "lodash._basecallback": {
+              "version": "3.3.1",
+              "dependencies": {
+                "lodash._baseisequal": {
+                  "version": "3.0.7",
+                  "dependencies": {
+                    "lodash.istypedarray": {
+                      "version": "3.0.2"
+                    }
+                  }
+                },
+                "lodash._bindcallback": {
+                  "version": "3.0.1"
+                },
+                "lodash.pairs": {
+                  "version": "3.0.1"
+                }
+              }
+            },
+            "lodash._baseeach": {
+              "version": "3.0.4"
+            },
+            "lodash._basereduce": {
+              "version": "3.0.1"
+            },
+            "lodash.isarray": {
+              "version": "3.0.4"
+            },
+            "lodash.keys": {
+              "version": "3.1.2",
+              "dependencies": {
+                "lodash._getnative": {
+                  "version": "3.9.1"
+                },
+                "lodash.isarguments": {
+                  "version": "3.0.4"
+                }
+              }
+            }
+          }
+        },
+        "optimist": {
+          "version": "0.6.1",
+          "dependencies": {
+            "wordwrap": {
+              "version": "0.0.3"
+            },
+            "minimist": {
+              "version": "0.0.10"
+            }
+          }
+        },
+        "require-dir": {
+          "version": "0.3.0"
+        }
+      }
+    },
+    "event-stream": {
+      "version": "3.3.1",
+      "dependencies": {
+        "through": {
+          "version": "2.3.8"
+        },
+        "duplexer": {
+          "version": "0.1.1"
+        },
+        "from": {
+          "version": "0.1.3"
+        },
+        "map-stream": {
+          "version": "0.1.0"
+        },
+        "pause-stream": {
+          "version": "0.0.11"
+        },
+        "split": {
+          "version": "0.3.3"
+        },
+        "stream-combiner": {
+          "version": "0.0.4"
+        }
+      }
+    },
+    "genoset-norovirus": {
+      "version": "1.0.1"
+    },
+    "gql": {
+      "version": "1.1.0"
+    }
+  }
+}
