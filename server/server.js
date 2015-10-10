@@ -1,6 +1,6 @@
 var norovirus = Meteor.npmRequire('genoset-norovirus');
 
-var dna = Meteor.require("C:\\Users\\Marmik\\Desktop\\Meteor-Hackathon\\dna.json");
+var dna = Meteor.npmRequire("/Users/sameer/Meteor-Hackathon/dna.json");
 
 //var dna=HTTP.get(Meteor.absoluteUrl("./dna.json")).data;
 

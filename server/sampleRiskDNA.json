@@ -1,0 +1,14 @@
+{
+	"riskFactorName" : "Obesity",
+	"Accuracy" : "12%",
+	"Author" : "Sameer B",
+	"daet" : "dd-mm-yy" 
+	DNARiskValues : {
+
+		"r423923" : "AA"
+		...
+		...
+		..
+	
+	}
+}
