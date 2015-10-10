@@ -1,0 +1,18 @@
+{
+    "name": "Meteor Boilerplate",
+    "description": "Heroku Compatible Meteor Boilerplate with FlowRouter, Materialize and other default goodies",
+    "repository": "https://github.com/cbanbury/boilerplate-meteor",
+    "keywords": ["meteor", "mongodb", "FlowRouter", "Materialize", "boilerplate"],
+    "buildpacks": [{
+        "url": "https://github.com/jordansissel/heroku-buildpack-meteor.git"
+    }],
+    "addons": [
+        "mongolab:sandbox"
+    ],
+    "env": {
+        "ROOT_URL": {
+            "description": "The https://your-app-name.herokuapp.com address or custom DNS of your server.",
+            "required": true
+        }
+    }
+}
