@@ -32,3 +32,9 @@ meteorhacks:npm
 
 npm-container
 http
+cfs:standard-packages
+cfs:filesystem
+cfs:ui
+tomi:upload-server
+tomi:upload-jquery
+twbs:bootstrap

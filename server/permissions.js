@@ -18,3 +18,13 @@ Risks.allow({
         return true;
     }
 });
+
+DNA.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  },
+  'update' : function () {
+    return true;
+  }
+});
