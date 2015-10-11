@@ -1,17 +1,16 @@
 Meteor.methods({
   'txt2json': function (filename) {
-
 /*  	var sys = Meteor.npmRequire('sys');
 	var exec = Meteor.npmRequire('child_process').exec;
 */	
     var cdPath ='/uploads/' + Meteor.userId() + '/';
     var inPath=cdPath+filename+".txt";
     var outPath=cdPath+filename+".json" 
+    var outPath=cdPath+filename+".json"
+
     shell.exec('dna2json '+inPath+" "+outPath, function(code, output) {
-		  console.log('Exit code:', code);
-  		  console.log('Program output:', output);
-  		  return "Done";
-});
+  	 console.log(output);
+    });
 
 
 
@@ -39,7 +38,6 @@ var JSONStream = Meteor.npmRequire('JSONStream');*/
 
 //       	var txt = fs.readFileSync(path.join(__meteor_bootstrap__.serverDir, '../web.browser/app/dna1.txt'), 'utf8');
 // //console.log(typeof txt);
-
 // dna.parse(txt, function(err, snps){
 //   fs.writeFileSync(path.join(__meteor_bootstrap__.serverDir, '../web.browser/app/dna1.json'), JSON.stringify(snps, null, 2));
 //         var justForReturning=1;

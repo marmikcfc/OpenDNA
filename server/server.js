@@ -2,8 +2,6 @@ var norovirus = Meteor.npmRequire('genoset-norovirus');
 
 var path = Meteor.npmRequire('path');
 var gql = Meteor.npmRequire('gql');
-
-
 var result= function() {
 
 	return Risks.findOne({});

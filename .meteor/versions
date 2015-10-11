@@ -3,6 +3,7 @@ accounts-password@1.1.3
 accounts-ui@1.1.6
 accounts-ui-unstyled@1.1.8
 alanning:roles@1.2.13
+anti:methods@0.4.0
 autoupdate@1.2.3
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
