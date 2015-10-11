@@ -12,52 +12,16 @@
       }
     },
     "dna2json": {
-      "version": "1.0.1",
+      "version": "0.3.3",
       "dependencies": {
-        "first-match": {
-          "version": "0.0.1"
-        },
-        "lodash.reduce": {
-          "version": "3.1.2",
+        "JSONStream": {
+          "version": "0.9.0",
           "dependencies": {
-            "lodash._basecallback": {
-              "version": "3.3.1",
-              "dependencies": {
-                "lodash._baseisequal": {
-                  "version": "3.0.7",
-                  "dependencies": {
-                    "lodash.istypedarray": {
-                      "version": "3.0.2"
-                    }
-                  }
-                },
-                "lodash._bindcallback": {
-                  "version": "3.0.1"
-                },
-                "lodash.pairs": {
-                  "version": "3.0.1"
-                }
-              }
+            "jsonparse": {
+              "version": "0.0.5"
             },
-            "lodash._baseeach": {
-              "version": "3.0.4"
-            },
-            "lodash._basereduce": {
-              "version": "3.0.1"
-            },
-            "lodash.isarray": {
-              "version": "3.0.4"
-            },
-            "lodash.keys": {
-              "version": "3.1.2",
-              "dependencies": {
-                "lodash._getnative": {
-                  "version": "3.9.1"
-                },
-                "lodash.isarguments": {
-                  "version": "3.0.4"
-                }
-              }
+            "through": {
+              "version": "2.3.8"
             }
           }
         },
@@ -71,9 +35,6 @@
               "version": "0.0.10"
             }
           }
-        },
-        "require-dir": {
-          "version": "0.3.0"
         }
       }
     },
