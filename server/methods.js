@@ -59,16 +59,19 @@ var exec = Meteor.npmRequire('child_process').exec;
       var future = new Future();
 
       var cdPath = process.cwd()+'/uploads/';
-      /*var command="cd "+cdPath;
+      var command="cd "+cdPath+" && dna2json "+filename+".txt "+filename+".json";
       exec(command,function(error,stdout,stderr){
           if(error){
               console.log(error);
               throw new Meteor.Error(500,command+" failed");
           }
           future.return(stdout.toString());
-      });*/
+      });
 
-      var command2="dna2json "+cdPath+filename+".txt "+cdPath+filename+".json";
+//      this.unblock();
+
+/*
+      var command2="dna2json "+filename+".txt "+filename+".json";
       exec(command2,function(error,stdout,stderr){
           if(error){
               console.log(error);
@@ -76,7 +79,7 @@ var exec = Meteor.npmRequire('child_process').exec;
           }
           future.return(stdout.toString());
       });
-
+*/
       return future.wait();
 
 
