@@ -1,5 +1,34 @@
 Meteor.methods({
   'txt2json': function (filename) {
+
+/*  	var sys = Meteor.npmRequire('sys');
+	var exec = Meteor.npmRequire('child_process').exec;
+*/	var cdPath ='/uploads/' + Meteor.userId() + '/';
+    var inPath=cdPath+filename+".txt";
+    var outPath=cdPath+filename+".json"
+  
+ 
+    shell.exec('dna2json '+inPath+" "+outPath, function(code, output) {
+		  console.log('Exit code:', code);
+  		  console.log('Program output:', output);
+  		  return "Done";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*var dna = Meteor.npmRequire('dna2json');
 var fs = Meteor.npmRequire('fs');
 var path = Meteor.npmRequire('path');
@@ -50,7 +79,7 @@ exec("dna2json "+filename+".txt "+filename+".json", puts);*/
 // return t2j.result;
 
 
-var sys = Meteor.npmRequire('sys');
+/*var sys = Meteor.npmRequire('sys');
 var exec = Meteor.npmRequire('child_process').exec;
 var fs = Meteor.npmRequire('fs');
 var path = Meteor.npmRequire('path');
@@ -65,7 +94,11 @@ var dna = Meteor.npmRequire('dna2json');
 
       var cdPath = process.cwd()+'/uploads/' + Meteor.userId() + '/';
       var inPath=cdPath+filename+".txt";
-      var outPath=cdPath+filename+".json"
+      var outPath=cdPath+filename+".json"*/
+
+
+
+
 /*      var txt = fs.readFile(inPath, 'utf8',  function (err, data) {
   if (err) throw err;
   console.log("DONE");
@@ -85,7 +118,7 @@ var dna = Meteor.npmRequire('dna2json');
   		future.return(console.log('All done! Your file is at', outPath));
 		});
 */
-  	fs.createReadStream(inPath).pipe(dna.createParser()).pipe(JSONStream.stringify()).pipe(fs.createWriteStream(outPath));
+  //	fs.createReadStream(inPath).pipe(dna.createParser()).pipe(JSONStream.stringify()).pipe(fs.createWriteStream(outPath));
 
 
 /*      var command="cd "+cdPath+" && dna2json "+filename+".txt "+filename+".json";
@@ -109,7 +142,7 @@ var dna = Meteor.npmRequire('dna2json');
           future.return(stdout.toString());
       });
 */
-      return future.wait();
+   //   return future.wait();
 
 
 },
