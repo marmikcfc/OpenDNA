@@ -28,8 +28,6 @@ spacebars
 check
 poetic:materialize-scss
 meteorhacks:npm
-
-
 npm-container
 http
 cfs:standard-packages
@@ -38,3 +36,4 @@ cfs:ui
 tomi:upload-server
 tomi:upload-jquery
 twbs:bootstrap
+meteorhacks:async
