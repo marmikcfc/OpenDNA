@@ -58,7 +58,7 @@ var exec = Meteor.npmRequire('child_process').exec;
       Future = Npm.require('fibers/future');
       var future = new Future();
 
-      var cdPath = process.cwd()+'/uploads/';
+      var cdPath = process.cwd()+'/uploads/' + Meteor.userId() + '/';
       var command="cd "+cdPath+" && dna2json "+filename+".txt "+filename+".json";
       exec(command,function(error,stdout,stderr){
           if(error){
