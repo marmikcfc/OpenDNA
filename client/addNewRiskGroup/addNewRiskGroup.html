@@ -1,0 +1,16 @@
+<template name="addNewRiskGroup">
+	<h5>Add new Risk Group</h5>
+	<form>
+		<label for="riskFactorName"> Risk Factor Name </label>
+		<input type="text" name="riskFactorName"/>
+		<label for="riskFactorAccuracy"> Accuracy (Percentage) </label>
+		<input type="number" name="riskFactorAccuracy"/>
+		<h8>DNA Sequence & Values</h8>
+		<div class='seqVal'>
+			<input type="text" name="seq" placeholder="DNA sequence"/>
+			<input type="text" name="val" placeholder="Sequence value"/>
+		</div>
+		<input type="submit" name="addMore" class="addMore" value="Add more sequence value pairs"/>
+		<input type="submit" class="submit"/>
+	</form>
+</template>
