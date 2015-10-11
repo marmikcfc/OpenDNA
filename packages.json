@@ -1,7 +1,7 @@
 {
 	"JSONStream":"1.0.6",
     "event-stream":"3.3.1",
-    "gql":"1.0.0", 
+    "gql":"1.1.0", 
     "dna2json":"0.3.3",
     "genoset-norovirus":"1.0.1",
     "fibers":"1.0.7"

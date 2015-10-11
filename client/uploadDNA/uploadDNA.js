@@ -7,11 +7,13 @@ Meteor.startup(function() {
     Meteor.call('txt2json',filename,function (err, response) {  
     console.log(response);
 	});
-	
+
+	//Meteor.call('dnaAnalysis',filename);
+
 //     Meteor.call('txt2json',fileInfo.name);
  
 };
-  //  Meteor.call('dnaAnalysis',filename);
+  //  
     //console.log(fileInfo.name);
   });
 

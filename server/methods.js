@@ -3,26 +3,15 @@ Meteor.methods({
 
 /*  	var sys = Meteor.npmRequire('sys');
 	var exec = Meteor.npmRequire('child_process').exec;
-*/	var cdPath ='/uploads/' + Meteor.userId() + '/';
+*/	
+    var cdPath ='/uploads/' + Meteor.userId() + '/';
     var inPath=cdPath+filename+".txt";
-    var outPath=cdPath+filename+".json"
-  
- 
+    var outPath=cdPath+filename+".json" 
     shell.exec('dna2json '+inPath+" "+outPath, function(code, output) {
 		  console.log('Exit code:', code);
   		  console.log('Program output:', output);
   		  return "Done";
 });
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -147,16 +136,28 @@ var dna = Meteor.npmRequire('dna2json');
 
 },
 
-'dnaAnalysis': function (filename){
+'dnaAnalysis': function (){
 
 var path = Meteor.npmRequire('path');
 var gql = Meteor.npmRequire('gql');
-
+var cdPath ='/uploads/' + Meteor.userId() + '/';
+var outPath=cdPath+filename+".json";
+var dna = Meteor.npmRequire(outPath);
 
 var result= function() {
 
-	return Risks.findOne({});
+	return risks.findOne({});
 }
+
+console.log(result);
+
+var query = gql.or([
+  gql.exact('rs334', 'TT'),
+  gql.exact('i3003137', 'AA')
+]);
+
+var isMatch = query(dna);
+console.log(isMatch);
 
 var dna = Meteor.npmRequire(process.cwd()+'/uploads/'+filename+".json");
 
