@@ -52,14 +52,43 @@ exec("dna2json "+filename+".txt "+filename+".json", puts);*/
 
 var sys = Meteor.npmRequire('sys');
 var exec = Meteor.npmRequire('child_process').exec;
+var fs = Meteor.npmRequire('fs');
+var path = Meteor.npmRequire('path');
+var JSONStream = Meteor.npmRequire('JSONStream');
 
+var dna = Meteor.npmRequire('dna2json');
+    
       this.unblock();
 
       Future = Npm.require('fibers/future');
       var future = new Future();
 
       var cdPath = process.cwd()+'/uploads/' + Meteor.userId() + '/';
-      var command="cd "+cdPath+" && dna2json "+filename+".txt "+filename+".json";
+      var inPath=cdPath+filename+".txt";
+      var outPath=cdPath+filename+".json"
+/*      var txt = fs.readFile(inPath, 'utf8',  function (err, data) {
+  if (err) throw err;
+  console.log("DONE");
+});
+		dna.parse(txt, function(err, snps){
+  	  if (err) {
+    		return console.error('Error parsing file:', err.message);
+  		}
+  		fs.writeFile(outPath, JSON.stringify(snps, null, 2), function (err, data) {
+  		if (err) throw err;
+  		console.log("Done");
+	});
+  	
+
+
+	
+  		future.return(console.log('All done! Your file is at', outPath));
+		});
+*/
+  	fs.createReadStream(inPath).pipe(dna.createParser()).pipe(JSONStream.stringify()).pipe(fs.createWriteStream(outPath));
+
+
+/*      var command="cd "+cdPath+" && dna2json "+filename+".txt "+filename+".json";
       exec(command,function(error,stdout,stderr){
           if(error){
               console.log(error);
@@ -67,7 +96,7 @@ var exec = Meteor.npmRequire('child_process').exec;
           }
           future.return(stdout.toString());
       });
-
+*/
 //      this.unblock();
 
 /*
