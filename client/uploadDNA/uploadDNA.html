@@ -1,15 +1,15 @@
 <template name="uploadDNA">
 	{{> getUserFiles}}
   <h4>Upload your DNA from 23andMe.com </h4>
-	<div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Success</span>
-              <p>DNA uploaded successfully!</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-          </div>
 	{{> upload_bootstrap formData=userData}}
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <span class="card-title">Success</span>
+        <p>DNA uploaded successfully!</p>
+        <p class='card-message'>Processing your DNA...This may take a while </p>
+      </div>
+    <div class="progress">
+      <div class="determinate" style="width:0%"></div>
+    </div>
+  </div>
 </template>

@@ -39,3 +39,4 @@ twbs:bootstrap
 meteorhacks:async
 accounts-ui
 izzilab:shelljs
+anti:methods
