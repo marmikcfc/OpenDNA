@@ -64,6 +64,9 @@
         }
       }
     },
+    "fibers": {
+      "version": "1.0.7"
+    },
     "genoset-norovirus": {
       "version": "1.0.1",
       "dependencies": {

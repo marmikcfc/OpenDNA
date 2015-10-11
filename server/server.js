@@ -4,11 +4,15 @@ var path = Meteor.npmRequire('path');
 var gql = Meteor.npmRequire('gql');
 
 
-//var result= Risks.findOne({});
+var result= function() {
+
+	return Risks.findOne({});
+}
 
 var dna = Meteor.npmRequire(path.join(__meteor_bootstrap__.serverDir,'../web.browser/app/dna.json'));
 
-//console.log(result['DNARiskValues']);
+console.log(result.DNARiskValues);
+
 // var query = gql.query();
 //   	query.needs(0);
 //   	query.and(query.exact('rs6025', 'A'), query.exact('rs1800595', 'C'));
