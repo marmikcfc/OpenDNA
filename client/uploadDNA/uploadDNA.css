@@ -1,0 +1,6 @@
+.upload-control, .progress-bar, .progressInner {
+	height : 40px;
+}
+.card {
+	display: none;
+}
