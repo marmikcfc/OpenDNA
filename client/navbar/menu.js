@@ -4,6 +4,9 @@ Template.navbar_menu.events({
     },
     'click .nav-uploadDNA': function() {
     	FlowRouter.go('uploadDNA');
+    },
+    'click .nav-newRiskGroup' : function() {
+        FlowRouter.go('addNewRiskGroup');
     }
 });
 

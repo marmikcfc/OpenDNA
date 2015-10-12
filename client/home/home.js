@@ -6,10 +6,17 @@ Template.home.onRendered(function() {
 
 
 Template.home.events({
-	'click .dnaAnalysis' : function(event) {
-
-		console.log(Meteor.user());
-
-		Meteor.call('dnaAnalysis', "dna3");
+	'submit .dnaAnalysis' : function(event) {
+		event.preventDefault();
+		var file;
+		for(var input in event.target) {
+			if(event.target[input].checked == true) {
+				file = event.target[input].value;
+				break;
+			}
+		}
+		file = file.substring(0,file.lastIndexOf("."));
+		console.log(file);
+		Meteor.call('dnaAnalysis', file);
 	}
 });
