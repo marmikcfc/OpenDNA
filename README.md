@@ -11,7 +11,7 @@ rs6025 =A AND rs1800595=C are susceptaible to Venous Thrombosis.
 More information about geotypes is available at https://opensnp.org.  
 
 ## Whats our goal?
-Our ultimate goal is to build a exhaustive dataset with information about various diseases/conditions. One should be able to upload his/her DNA and receive information about susceptible diseases/conditions. Of course this is a big feat and we need your help!
+Our ultimate goal is to build a exhaustive dataset with information about various diseases/conditions. One should be able to upload his/her DNA and receive information about susceptible diseases/conditions. We hope to provide DNA matching as a service (So that tinder can provide users with matches at genetic level! :P). This is the future of personalised Genome Analytics. Of course this is a big feat and we need your help!
 
 ## How do you plan on gathering data?
 We're programmers not genome experts! We plan on crowd sourcing our dataset. Once your login and register there is a option for "Add New Risk Groups". Anyone can enter rsid-value pairs. We plan to add verification soon.
