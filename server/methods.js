@@ -147,19 +147,21 @@ var result= Risks.findOne({});
 console.log(result.DNARiskValues);
 
 
+var exactArray=new Array();
 
 for (var key in result.DNARiskValues) {
   if (result.DNARiskValues.hasOwnProperty(key) && result.DNARiskValues[key]!="") {
       //console.log("key   "+key+"value  "+result.DNARiskValues[key]);
 
-      console.log(gql.exact(key,result.DNARiskValues[key]));
+      exactArray.push(gql.exact(key,result.DNARiskValues[key]));
+
   }
 }
 
 //var abc=gql.exact('rs334', 'TT');
 //var pqr= gql.exact('i3003137', 'AA');
 
-var query = gql.or([abc,pqr]);
+var query = gql.or(exactArray);
 
 var isMatch = query(dna);
 console.log(isMatch);
