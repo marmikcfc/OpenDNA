@@ -133,6 +133,11 @@ var dna = Meteor.npmRequire('dna2json');
 
 
 },
+'getUserFiles' : function() {
+    var cdPath = process.cwd() +  '/uploads/' + Meteor.userId() + '/';
+    var result = shell.exec('ls '+cdPath);
+    return result.output;
+},
 
 'dnaAnalysis': function (){
 

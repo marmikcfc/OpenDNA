@@ -68,12 +68,7 @@
       "version": "1.0.7"
     },
     "genoset-norovirus": {
-      "version": "1.0.1",
-      "dependencies": {
-        "gql": {
-          "version": "1.1.0"
-        }
-      }
+      "version": "1.0.1"
     },
     "gql": {
       "version": "1.1.0"
