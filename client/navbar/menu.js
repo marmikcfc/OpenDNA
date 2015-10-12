@@ -7,6 +7,9 @@ Template.navbar_menu.events({
     },
     'click .nav-newRiskGroup' : function() {
         FlowRouter.go('addNewRiskGroup');
+    }, 
+    'click .nav-myDNA' : function() {
+        FlowRouter.go('myDNA');
     }
 });
 
