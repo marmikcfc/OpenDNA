@@ -17,7 +17,7 @@ Meteor.startup(function() {
       var t =0;
       setTimeout(function(){
         $('.card-message').text('Processed Successfully');
-      },20000); 
+      },35000); 
       setInterval(function() {
         $('.determinate').attr('style','width:'+t+'%');
         t = t + 5;

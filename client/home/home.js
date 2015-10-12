@@ -10,6 +10,6 @@ Template.home.events({
 
 		console.log(Meteor.user());
 
-		//Meteor.call('getUserFiles', Meteor.userId());
+		Meteor.call('dnaAnalysis', "dna3");
 	}
 });
