@@ -18,7 +18,7 @@ Template.myDNA.events({
 
 Template.myDNA.helpers({
 	analysis : function() {
-		return dnaAnalysis.find({userid: Meteor.userId()});
+		return Analysis.find();
 	}
 });
 

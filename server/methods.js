@@ -40,8 +40,8 @@ Meteor.methods({
      }
      var query = gql.or(exactArray);
      var isMatch = query(dna);
-     var percentage=query.percentage();
-     console.log("percentage "+percentage);
+    // var percentage=query.percentage();
+    // console.log("percentage "+percentage);
      eachRiskGroupAnalysis[res.riskFactorName]=isMatch;
    });
    riskGroupAnalysis['eachRiskGroupAnalysis']= eachRiskGroupAnalysis;
