@@ -174,7 +174,11 @@ for (var key in res.DNARiskValues) {
 var query = gql.or(exactArray);
 
 var isMatch = query(dna);
-console.log(isMatch);
+//var matches=query.matches();
+var percentage=query.percentage();
+
+
+console.log(isMatch+" Matches "+matches+" Percentages "+percentage);
 
 
 eachRiskGroupAnalysis[res.riskFactorName]=isMatch;
