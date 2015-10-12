@@ -7,7 +7,7 @@ OpenDNA supports 3 sources currently: 23AndMe, Ancestry & FamilyTree.
 
 ## What are risk groups?
 Certain genoset with particular rsids-values pairs are susceptible to some diseases for example: People with 
-rs6025 =A AND rs1800595=C are susceptaible to Venous Thrombosis.
+rs334 =TT AND i3003137=AA are susceptaible to Venous Thrombosis.
 More information about geotypes is available at https://opensnp.org.  
 
 ## Whats our goal?
