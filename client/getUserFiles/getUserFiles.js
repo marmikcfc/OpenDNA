@@ -17,7 +17,6 @@ Template.getUserFiles.rendered = function() {
 			if(isEmpty) {
 				$('.listUserFiles').append("<p> Sorry you have no uploaded DNAs. </p>");
 			}
-
 		});
     }
 }
