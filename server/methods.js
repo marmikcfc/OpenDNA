@@ -134,11 +134,11 @@ var dna = Meteor.npmRequire('dna2json');
 
 },
 
-'dnaAnalysis': function (){
+'dnaAnalysis': function (filename){
 
 var path = Meteor.npmRequire('path');
 var gql = Meteor.npmRequire('gql');
-var cdPath ='/uploads/' + Meteor.userId() + '/';
+var cdPath = process.cwd() +'/uploads/' + Meteor.userId() + '/';
 var outPath=cdPath+filename+".json";
 var dna = Meteor.npmRequire(outPath);
 
@@ -147,7 +147,7 @@ var result= function() {
 	return risks.findOne({});
 }
 
-console.log(result);
+console.log(result.DNARiskValues);
 
 var query = gql.or([
   gql.exact('rs334', 'TT'),
@@ -157,7 +157,7 @@ var query = gql.or([
 var isMatch = query(dna);
 console.log(isMatch);
 
-var dna = Meteor.npmRequire(process.cwd()+'/uploads/'+filename+".json");
+var dna = Meteor.npmRequire(outPath);
 
 console.log("DNARiskValues     " + result['DNARiskValues']);
 
