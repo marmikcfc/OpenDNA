@@ -147,18 +147,23 @@ var cdPath = process.cwd() +'/uploads/' + Meteor.userId() + '/';
 var outPath=cdPath+filename+".json";
 var dna = Meteor.npmRequire(outPath);
 
-var result= Risks.findOne({});
+var result= Risks.find().fetch();
 
-console.log(result.DNARiskValues);
+console.log(result);
 
+var riskGroupAnalysis = new Object();
+riskGroupAnalysis["userid"]=Meteor.userId();
+
+var eachRiskGroupAnalysis = new Object();
+_.each(result, function(res){
 
 var exactArray=new Array();
 
-for (var key in result.DNARiskValues) {
-  if (result.DNARiskValues.hasOwnProperty(key) && result.DNARiskValues[key]!="") {
+for (var key in res.DNARiskValues) {
+  if (res.DNARiskValues.hasOwnProperty(key) && res.DNARiskValues[key]!="") {
       //console.log("key   "+key+"value  "+result.DNARiskValues[key]);
 
-      exactArray.push(gql.exact(key,result.DNARiskValues[key]));
+      exactArray.push(gql.exact(key,res.DNARiskValues[key]));
 
   }
 }
@@ -171,9 +176,16 @@ var query = gql.or(exactArray);
 var isMatch = query(dna);
 console.log(isMatch);
 
-var dna = Meteor.npmRequire(outPath);
 
-console.log("DNARiskValues     " + result);
+eachRiskGroupAnalysis[res.riskFactorName]=isMatch;
+
+
+
+});
+riskGroupAnalysis['eachRiskGroupAnalysis']= eachRiskGroupAnalysis;
+Analysis.insert(riskGroupAnalysis);
+console.log(Analysis.find().fetch());
+//console.log("DNARiskValues     " + result);
 
 
 
