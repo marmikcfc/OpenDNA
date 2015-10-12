@@ -1,3 +1,6 @@
+Meteor.subscribe('dnaAnalysis');
+Meteor.subscribe('risks');
+
 Template.myDNA.events({
 	'submit .dnaAnalysis' : function(event) {
 		event.preventDefault();
@@ -12,3 +15,10 @@ Template.myDNA.events({
 		Meteor.call('dnaAnalysis', file);
 	}
 });
+
+Template.myDNA.helpers({
+	analysis : function() {
+		return dnaAnalysis.find({userid: Meteor.userId()});
+	}
+});
+
